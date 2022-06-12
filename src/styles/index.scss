@@ -1,6 +1,18 @@
 $body-color: slateblue;
 
-body {
-  color: $body-color;
-  font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section.stretch {
+	float: left;
+	height: 1500px;
+	width: 100%;
+}
+
+section.stretch p.bottom {
+	top: 100%;
+	padding-bottom: 1em;
 }

@@ -1,0 +1,125 @@
+$backgroundColor: #2e261c;
+
+header {
+  .promo {
+    background-color: #eaccc2;
+    color: $backgroundColor;
+    font-size: 10px;
+    text-align: center;
+    height: 38px;
+    line-height: 38px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    height: 99px;
+    padding-left: 64px;
+    padding-right: 64px;
+    align-items: center;
+	  transition: 0.4s;
+    background-color: $backgroundColor;
+
+    .icon {
+      display: none;
+    }
+
+    ul {
+      list-style-type: none;
+      height: 100%;
+
+      li,
+      div {
+        display: inline;
+        color: #fff;
+		padding-inline: 15px;
+      }
+
+      #items button {
+        font-size: 13px;
+        color: #fff;
+        border: 0;
+        background-color: $backgroundColor;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+
+		i {
+			margin-left: 5px;
+			transition: 0.5s ease transform;
+		}
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown-content {
+		display: none;
+        position: absolute;
+		width: 100vw;
+		background-color: #fff;
+        z-index: 1;
+		height: 40%;
+		left: 0;
+
+		a {
+			float: none;
+			color: black;
+			padding: 50px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+			font-size: 13px;
+		  }
+      }
+
+	  #items:hover .dropdown-content {
+		display: block;
+	  }
+
+	  #items:hover #icon {
+		transform: rotate(180deg);
+	  }
+
+      li:hover {
+        border-bottom: 5px solid #c65237;
+      }
+    }
+
+    .nav-items {
+        height: 100%;
+    }
+
+    #navbar-left,
+    #navbar-right {
+      line-height: 99px;
+      font-size: 13px;
+	    height: 100%;
+    }
+
+    #navbar-left {
+      display: inline-flex;
+      justify-content: space-between;
+    }
+
+    #navbar-right {
+      display: inline-flex;
+      justify-content: space-between;
+    }
+
+    .brand-info {
+      display: flex;
+
+      .brand-info {
+        height: 11px;
+      }
+    }
+  }
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
