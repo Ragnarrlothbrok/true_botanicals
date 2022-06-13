@@ -60,7 +60,6 @@ header {
 		width: 100vw;
 		background-color: #fff;
         z-index: 1;
-		height: 40%;
 		left: 0;
 
 		a {
@@ -72,6 +71,37 @@ header {
 			text-align: left;
 			font-size: 13px;
 		  }
+
+      .search-input {
+        position: relative;
+        left: 15%;
+      }
+
+      .input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid black;
+        color: #555;
+        box-sizing: border-box;
+        font-size: 18px;
+        height: 50px;
+        margin: -25px 0 0 -100px;
+        padding: 10 0;
+        position: relative;
+        width: 80%;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .input-text {
+        position: absolute;
+        color: black;
+        font-size: 18px;
+        font-weight: bolder;
+        right: 2%;
+      }
       }
 
 	  #items:hover .dropdown-content {
@@ -122,4 +152,16 @@ header {
 	position: fixed;
 	top: 0;
 	width: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+  .dropdown { display: none; }
+  #navbar-right { display: hidden; }
+
+  nav a.icon {
+    display: inline-flex;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+  }
 }
