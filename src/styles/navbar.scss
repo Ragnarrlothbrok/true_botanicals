@@ -24,6 +24,10 @@ header {
       display: none;
     }
 
+    .mobile-nav {
+      display: none;
+    }
+
     ul {
       list-style-type: none;
       height: 100%;
@@ -32,7 +36,7 @@ header {
       div {
         display: inline;
         color: #fff;
-		padding-inline: 15px;
+		    padding-inline: 15px;
       }
 
       #items button {
@@ -155,11 +159,60 @@ header {
 }
 
 @media screen and (max-width: 1300px) {
-  .dropdown { display: none; }
-  #navbar-right { display: hidden; }
+  header nav ul li { display: none; }
+
+  header {
+    .promo {
+      height: 36px;
+      line-height: 36px;
+    }
+
+    #navbar {
+      height: 64px !important;
+      line-height: 64px;
+    }
+  }
+
+  header nav .mobile-nav {
+    display: inline-flex;
+    width: 20%;
+    justify-content: flex-end;
+
+    a {
+      display: inline-flex;
+      padding-inline: 15px;
+    }
+  }
+
+  header nav #navbar-right {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 100px;
+    background-color: white;
+    color: black;
+    height: 100vh;
+    width: 300px;
+    padding: 15px;
+
+    li {
+      display: flex !important;
+      padding: 10px 0;
+      z-index: 99;
+      color: black;
+      justify-content: flex-start;
+    }
+
+    &.active {
+      display: flex;
+      z-index: 9;
+    }
+  }
 
   nav a.icon {
     display: inline-flex;
+    width: 20%;
     color: #fff;
     text-decoration: none;
     font-size: 13px;

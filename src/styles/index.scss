@@ -6,6 +6,24 @@ $body-color: slateblue;
   box-sizing: border-box;
 }
 
+@font-face {
+    font-family: ivymode;
+    src: url("../assets/fonts/ivymode.woff2")  format("woff2"), url("../assets/fonts/juniper.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: juniper;
+    src: url("../assets/fonts/juniper.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font-family: juniper, sans-serif;
+  }
+
 section.stretch {
 	float: left;
 	height: 1500px;

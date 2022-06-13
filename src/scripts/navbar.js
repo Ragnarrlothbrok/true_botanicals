@@ -5,6 +5,9 @@ window.onscroll = function() {
 
 let navbar = document.getElementById("navbar");
 let sticky = navbar.offsetTop;
+const hamburgerMenu = document.getElementById("menuIcon");
+const overlay = document.querySelector('.overlay');
+const navbarRight = document.getElementById('navbar-right');
 
 function stickyFunction() {
     if (window.pageYOffset >= sticky) {
@@ -26,3 +29,10 @@ function scrollFunction() {
     document.getElementById("navbar-left").style.lineHeight = "99px";
   }
 }
+
+hamburgerMenu.addEventListener('click', ()=>{
+  navbarRight.classList.toggle('active');
+  overlay.classList.add('active');
+  // if(navbarLeft.classList.contains('active'))
+  //   dropdownValue.classList.add('stories-mob');
+});
