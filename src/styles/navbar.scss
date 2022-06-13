@@ -8,6 +8,8 @@ header {
     text-align: center;
     height: 38px;
     line-height: 38px;
+    z-index: 1000;
+    position: relative;
   }
 
   nav {
@@ -19,6 +21,8 @@ header {
     align-items: center;
 	  transition: 0.4s;
     background-color: $backgroundColor;
+    z-index: 1000;
+    position: relative;
 
     .icon {
       display: none;
@@ -180,7 +184,7 @@ header {
 
     a {
       display: inline-flex;
-      padding-inline: 15px;
+      padding-left: 20px;
     }
   }
 
@@ -202,13 +206,16 @@ header {
       padding: 10px 0;
       z-index: 99;
       color: black;
-      justify-content: flex-start !important;
       line-height: normal;
 
       .dropbtn {
         background-color: white;
         color: black;
       }
+    }
+
+    li:hover {
+      border: none;
     }
 
     &.active {

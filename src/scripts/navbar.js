@@ -32,9 +32,7 @@ function scrollFunction() {
 
 hamburgerMenu.addEventListener('click', ()=>{
   navbarRight.classList.toggle('active');
-  overlay.classList.add('active');
-  // if(navbarLeft.classList.contains('active'))
-  //   dropdownValue.classList.add('stories-mob');
+  overlay.classList.toggle('active');
 });
 
 overlay.addEventListener('click', ()=> {
