@@ -36,3 +36,8 @@ hamburgerMenu.addEventListener('click', ()=>{
   // if(navbarLeft.classList.contains('active'))
   //   dropdownValue.classList.add('stories-mob');
 });
+
+overlay.addEventListener('click', ()=> {
+  navbarRight.classList.remove('active');
+  overlay.classList.remove('active');
+});

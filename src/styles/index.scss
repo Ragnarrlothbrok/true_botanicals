@@ -21,7 +21,7 @@ $body-color: slateblue;
 }
 
 body {
-	font-family: juniper, sans-serif;
+	font-family: ivymode, sans-serif;
   }
 
 section.stretch {
@@ -33,4 +33,19 @@ section.stretch {
 section.stretch p.bottom {
 	top: 100%;
 	padding-bottom: 1em;
+}
+
+.overlay {
+	display: none;
+	z-index: 0;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #000000b3;
+
+	&.active {
+	  display: flex;
+	}
 }
