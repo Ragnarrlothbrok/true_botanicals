@@ -1,5 +1,5 @@
 .section2 {
-    background-image: grey;
+    background-image: url("../assets/bg-section-2.webp");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 50%;
@@ -8,12 +8,11 @@
 
 .grid-container {
     display: grid;
-    grid-template: repeat(12, [row] 1fr) / repeat(12, [col] 1fr);
-    grid-gap: 15px;
-    max-width: 1330px;
-    margin: 5% 2%;
+    grid-template: repeat(12, [row] 1fr) / repeat(24, [col] 1fr);
+    grid-gap: 10px;
+    padding: 5%;
     overflow: hidden;
-    min-height: 90vh;
+    box-sizing: border-box;
 }
 
 .grid-image-1,
@@ -33,36 +32,22 @@
 }
 
 .grid-image-1 {
-    grid-column: col 3 / span 5;
-    grid-row: row 1 / span 7;
+    grid-column: col 3 / span 9;
+    grid-row: row 1 / span 4;
     z-index: 2;
-}
-
-@media (max-width: 800px) {
-    .section2 {
-        margin-top: 5%;
-    }
-
-    .grid-container {
-        margin: 0;
-    }
-
-    .grid-image-1 {
-        grid-column: col 1 / span 12;
-        grid-row: row 1 / span 3;
-    }
 }
 
 .grid-quiz-box {
     background-color: #2e261c;
-    grid-column: col 7 / span 4;
-    grid-row: row 2 / span 5;
+    grid-column: col 11 / span 7;
+    grid-row: row 2 / span 3;
     z-index: 3;
     flex-direction: column;
     padding: 3rem;
     color: white;
     align-items: flex-start;
     justify-content: space-evenly;
+    transform: translateY(-70px);
 
     h3 {
         padding: 10px 0;
@@ -76,26 +61,45 @@
         color: #fff;
         padding: 5px 0;
     }
+}
 
-    @media (max-width: 800px) {
+.grid-image-2 {
+    grid-column: col 18 / span 5;
+    grid-row: row 4 / span 3;
+    z-index: 2;
+    transform: translateY(-40px);
+}
+
+@media (max-width: 800px) {
+    .section2 {
+        margin-top: 5%;
+        background-image: url("../assets/bg-section-2-mobile.webp");
+    }
+
+    .grid-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .grid-image-1 {
+        grid-column: col 1 / span 24;
+        grid-row: row 1 / span 5;
+    }
+
+    .grid-quiz-box {
         justify-content: space-evenly;
         align-items: flex-start;
-        grid-column: col 5 / span 7;
-        grid-row: row 3 / span 3;
+        grid-column: col 10 / span 13;
+        grid-row: row 6 / span 4;
+        padding: 1.5rem;
 
         h3 {
             padding-left: 0;
         }
     }
-}
 
-.grid-image-2 {
-    grid-column: col 11 / span 4;
-    grid-row: row 6 / span 4;
-    z-index: 2;
-
-    @media (max-width: 800px) {
-        grid-column: col 2 / span 7;
-        grid-row: row 5 / span 3;
+    .grid-image-2 {
+        grid-column: col 3 / span 11;
+        grid-row: row 9 / span 3;
     }
 }

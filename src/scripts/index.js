@@ -3,8 +3,6 @@ import "../styles/navbar.scss";
 import "../styles/section2.scss";
 import "./navbar";
 
-// console.log('webpack starterkit');
-
 function run() {
   var password = prompt("Password Please");
   if (password != "anatta") {
