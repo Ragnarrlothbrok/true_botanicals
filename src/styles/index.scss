@@ -8,7 +8,14 @@ $body-color: slateblue;
 
 @font-face {
     font-family: ivymode;
-    src: url("../assets/fonts/ivymode.woff2")  format("woff2"), url("../assets/fonts/juniper.woff2") format("woff2");
+    src: url("../assets/fonts/ivymode.woff2")  format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: wotfard;
+    src: url("../assets/fonts/wotfard-regular.woff")  format("woff"), url("../assets/fonts/wotfard-regular.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
@@ -21,7 +28,7 @@ $body-color: slateblue;
 }
 
 body {
-	font-family: ivymode, sans-serif;
+	font-family: wotfard, sans-serif;
   }
 
 .overlay {
