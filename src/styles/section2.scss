@@ -8,9 +8,9 @@
 
 .grid-container {
     display: grid;
-    grid-template: repeat(12, [row] 1fr) / repeat(24, [col] 1fr);
+    grid-template: repeat(6, [row] 1fr) / repeat(24, [col] 1fr);
     grid-gap: 10px;
-    padding: 5%;
+    padding: 5% 5% 0;
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -79,6 +79,7 @@
     .grid-container {
         margin: 0;
         padding: 0;
+        grid-template: repeat(11, [row] 1fr) / repeat(24, [col] 1fr);
     }
 
     .grid-image-1 {

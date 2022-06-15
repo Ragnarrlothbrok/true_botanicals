@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>True Botanicals</title>
   <meta name="description" content="">
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   <script src="https://kit.fontawesome.com/82c30b1abf.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 </head>
 <body>
   <header>
@@ -87,6 +92,157 @@
         <img src="./assets/grid_product_image.jpg" alt=""/>
       </div>
     </div>
-  </section>
+    <div id="best-sellers-section" class="swiper">
+      <div class="section-header">
+        <h2 class="section-title">Best Sellers</h2>
+        <a href="#" class="header-link">SHOP BESTSELLERS</a>
+      </div>
+      <div class="swiper-container">
+        <div id="responsive-swiper" class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <span class="product-badge">Best Seller</span>
+          <div class="product-img-1"></div>
+
+          <div class="product-content">
+            <div class="product-rating">
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star-half fa-sm"></i>
+            <span>3788</span>
+          </div>
+          <div class="product-info">
+            <a href="#" class="product-title">
+              <span class="product-collection-name">clear</span>
+              <span> Pure Radiance Oil</span>
+            </a>
+            <div class="product-description">
+              Moisturizing anti-aging face oil for oily blemish prone skin
+            </div>
+          </div>
+          </div>
+          <div><button class="product-price">ADD TO BAG - $90</button></div>
+        </div>
+        <div class="swiper-slide">
+          <span class="product-badge">Best Seller</span>
+          <div class="product-img-2"></div>
+
+          <div class="product-content">
+            <div class="product-rating">
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star-half fa-sm"></i>
+            <span>3788</span>
+          </div>
+          <div class="product-info">
+            <a href="#" class="product-title">
+              <span class="product-collection-name">clear</span>
+              <span> Pure Radiance Oil</span>
+            </a>
+            <div class="product-description">
+              Moisturizing anti-aging face oil for oily blemish prone skin
+            </div>
+          </div>
+          </div>
+          <div><button class="product-price">ADD TO BAG - $90</button></div>
+        </div>
+        <div class="swiper-slide">
+          <span class="product-badge">Best Seller</span>
+          <div class="product-img-1"></div>
+
+          <div class="product-content">
+            <div class="product-rating">
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star-half fa-sm"></i>
+            <span>3788</span>
+          </div>
+          <div class="product-info">
+            <a href="#" class="product-title">
+              <span class="product-collection-name">clear</span>
+              <span> Pure Radiance Oil</span>
+            </a>
+            <div class="product-description">
+              Moisturizing anti-aging face oil for oily blemish prone skin
+            </div>
+          </div>
+          </div>
+          <div><button class="product-price">ADD TO BAG - $90</button></div>
+        </div>
+        <div class="swiper-slide">
+          <span class="product-badge">Best Seller</span>
+          <div class="product-img-2"></div>
+
+          <div class="product-content">
+            <div class="product-rating">
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star fa-sm"></i>
+            <i class="fa-solid fa-star-half fa-sm"></i>
+            <span>3788</span>
+          </div>
+          <div class="product-info">
+            <a href="#" class="product-title">
+              <span class="product-collection-name">clear</span>
+              <span> Pure Radiance Oil</span>
+            </a>
+            <div class="product-description">
+              Moisturizing anti-aging face oil for oily blemish prone skin
+            </div>
+          </div>
+          </div>
+          <div><button class="product-price">ADD TO BAG - $90</button></div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="controls">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+      </div>
+    </div>
+
+
+  
+  </div>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1500: {
+          slidesPerView: 3,
+        },
+        1600: {
+          slidesPerView: 4,
+        }
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true
+      }
+    })
+  </script>
 </body>
 </html>
