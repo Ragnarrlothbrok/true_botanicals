@@ -7,56 +7,56 @@ $body-color: slateblue;
 }
 
 @font-face {
-    font-family: ivymode;
-    src: url("../assets/fonts/ivymode.woff2")  format("woff2");
-    font-weight: normal;
-    font-style: normal;
+  font-family: ivymode;
+  src: url("../assets/fonts/ivymode.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: wotfard;
-    src: url("../assets/fonts/wotfard-regular.woff")  format("woff"), url("../assets/fonts/wotfard-regular.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
+  font-family: wotfard;
+  src: url("../assets/fonts/wotfard-regular.woff") format("woff"), url("../assets/fonts/wotfard-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: juniper;
-    src: url("../assets/fonts/juniper.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
+  font-family: juniper;
+  src: url("../assets/fonts/juniper.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-	font-family: wotfard, sans-serif;
-  }
+  font-family: wotfard, sans-serif;
+}
 
 .overlay {
-	display: none;
-	z-index: 0;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: #000000b3;
+  display: none;
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000b3;
 
-	&.active {
-	  display: flex;
-	}
+  &.active {
+    display: flex;
+  }
 }
 
 .banner {
-	width: 100%;
-	height: 50vh;
-	background-image: url("../assets/section1.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 50% 50%;
+  width: 100%;
+  height: 50vh;
+  background-image: url("../assets/section1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 @media screen and (max-width: 800px) {
-	.banner {
-		background-image: url("../assets/section1_responsive.jpg");
-	}
+  .banner {
+    background-image: url("../assets/section1_responsive.jpg");
+  }
 }

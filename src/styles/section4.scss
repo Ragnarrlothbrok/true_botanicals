@@ -17,6 +17,7 @@
   font-size: 2rem;
   margin-bottom: 16px;
   color: #2e261c;
+  z-index: 3;
 }
 
 .recommendation-image {
@@ -28,13 +29,13 @@
   letter-spacing: 0;
   color: #2e261c;
 
-  .image-wrapper {
+  #image-wrapper {
     max-width: 1088px;
     max-height: 1400px;
 
     .author-image {
       vertical-align: middle;
-      width: inherit;
+      width: 100%;
     }
   }
 
@@ -127,4 +128,100 @@
       margin-bottom: 16px;
     }
   }
+}
+
+@media (max-width: 768px) {
+    .recommendation-section {
+        padding-top: 0;
+        padding-bottom: 5rem;
+        position: relative;
+      }
+
+      .recommendation {
+        display: block;
+        position: relative;
+      }
+
+     .mobile-only-title {
+        display: block;
+
+        h2 {
+            font-family: ivymode, sans-serif;
+            margin-bottom: -32px;
+            padding-left: 16px;
+            max-width: 31.25rem;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            line-height: 2.5rem;
+            font-weight: 300;
+        }
+      }
+
+      .recommendation-image {
+        margin-left: auto;
+        max-width: 23.75rem;
+        width: calc(100% - 80px);
+        box-sizing: border-box;
+
+        #image-wrapper {
+          max-width: 1088px;
+          max-height: 1400px;
+
+          .author-image {
+            vertical-align: middle;
+            width: 100%;
+          }
+        }
+
+        .author-name {
+          font-size: 0.75rem;
+          line-height: 1rem;
+          margin: 0;
+          margin-top: 0.5rem;
+          padding: 0;
+        }
+      }
+
+      .recommendation-content {
+        padding: 0;
+        margin: 0;
+        padding-left: 1rem;
+        position: relative;
+
+        .r-title {
+          display: none !important;
+        }
+
+        .r-pointers {
+          display: flex;
+          flex-direction: column;
+          margin-top: 4.5rem;
+          width: 100%;
+
+          .r-pointer {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 2.5rem;
+
+          .r-icon {
+            max-width: 100%;
+            width: 40px !important;
+          }
+          }
+
+          .r-pointer-content {
+            padding-left: 1rem;
+          }
+
+          .r-pointer-title {
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 0.5rem;
+            line-height: 1rem !important;
+          }
+        }
+      }
 }
