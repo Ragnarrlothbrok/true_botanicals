@@ -7,7 +7,7 @@ import "./navbar";
 import "./section3";
 
 function run() {
-  var password = prompt("Password Please");
+  var password = prompt("Please provide password.");
   if (password != "anatta") {
     document.body.innerHTML = "";
     document.body.innerHTML = "Password Failed! Reload to Renter Password";

@@ -1,5 +1,3 @@
-$body-color: slateblue;
-
 * {
   margin: 0;
   padding: 0;
@@ -28,18 +26,27 @@ $body-color: slateblue;
 }
 
 body {
-  font-family: wotfard, sans-serif;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+  	font-family: wotfard, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: #2e261c;
 }
 
 .overlay {
   display: none;
-  z-index: 0;
+  z-index: 50;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #000000b3;
+  background: #2e261c;
+  opacity: 0.8;
 
   &.active {
     display: flex;
@@ -48,15 +55,4 @@ body {
 
 .banner {
   width: 100%;
-  height: 50vh;
-  background-image: url("../assets/section1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-@media screen and (max-width: 800px) {
-  .banner {
-    background-image: url("../assets/section1_responsive.jpg");
-  }
 }

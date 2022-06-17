@@ -1,27 +1,81 @@
 $backgroundColor: #2e261c;
 
-header {
+.promo-bar {
+  position: relative;
+  z-index: 1100;
+
   .promo {
-    background-color: #eaccc2;
-    color: $backgroundColor;
-    font-size: 10px;
-    text-align: center;
-    height: 38px;
-    line-height: 38px;
-    z-index: 1000;
+    display: flex;
+    width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  color: $backgroundColor;
+  background-color: #eaccc3;
+  padding: 0.5rem 0;
+  line-height: 1.25rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0;
+  }
+
+  .promo-button {
     position: relative;
+    padding-right: 15px;
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-left: 8px;
+    min-width: 70px;
+    font-weight: 500;
+    text-decoration: none;
+    color: $backgroundColor;
+    background-color: transparent;
+
+    .promo-number {
+      display: inline-block;
+      position: absolute;
+    top: 0;
+    right: 0;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    border-radius: 50%;
+    font-size: 10px;
+    background: #f3f2ef;
+    text-align: center;
+    color: $backgroundColor;
+    }
+  }
+}
+
+.header-section {
+  position: sticky;
+    transition: top 0.7s ease;
+    z-index: 1050;
+    top: 0;
+}
+
+header {
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: 100%;
+
+  .container {
+    padding-left: 2.625rem;
+    padding-right: 2.625rem;
+    background-color: $backgroundColor;
+    position: relative;
+    z-index: 150;
   }
 
   nav {
+  box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     height: 99px;
-    padding-left: 64px;
-    padding-right: 64px;
+    padding: 0;
     align-items: center;
-    transition: 0.4s;
-    background-color: $backgroundColor;
-    z-index: 1000;
+    transition: 0.7s;
+    z-index: 150;
     position: relative;
 
     .icon {
@@ -40,20 +94,24 @@ header {
       div {
         display: inline;
         color: #fff;
-        padding-inline: 15px;
+        padding-inline: 1.25rem;
+        font-size: 0.8125rem;
+        font-family: wotfard, sans-serif;
+        letter-spacing: 2px;
       }
 
       #items button {
-        font-size: 13px;
+        font-size: 0.8125rem;
+        font-family: wotfard, sans-serif;
+        letter-spacing: 1.28px;
         color: #fff;
         border: 0;
         background-color: $backgroundColor;
         text-decoration: none;
-        transition: all 0.3s ease-in-out;
+        transition: 0.3s ease-out transform;
 
         i {
-          margin-left: 5px;
-          transition: 0.5s ease transform;
+          transition: 0.3s ease-out transform;
         }
       }
 
@@ -68,7 +126,7 @@ header {
         width: 100vw;
         background-color: #fff;
         z-index: 1;
-        left: 0;
+        left: -2.5rem;
 
         a {
           float: none;
@@ -144,6 +202,11 @@ header {
     #navbar-right {
       display: inline-flex;
       justify-content: space-between;
+      transition: 0.7s;
+
+      .brand-name {
+        transform: translateY(0.15rem);
+      }
     }
 
     .brand-info {
@@ -156,27 +219,9 @@ header {
   }
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 85.375rem) {
   header nav ul li {
     display: none;
-  }
-
-  header {
-    .promo {
-      height: 36px;
-      line-height: 36px;
-    }
-
-    #navbar {
-      height: 64px !important;
-      line-height: 64px;
-    }
   }
 
   header nav .mobile-nav {
@@ -186,7 +231,7 @@ header {
 
     a {
       display: inline-flex;
-      padding-left: 20px;
+      padding-inline: 1.5rem;
     }
   }
 
@@ -195,17 +240,18 @@ header {
     flex-direction: column;
     position: fixed;
     left: 0;
-    top: 100px;
+    top: 135px;
     background-color: white;
     color: black;
     height: 100vh;
-    width: 300px;
-    padding: 15px;
+    width: 288px;
+    padding: 16px;
     justify-content: flex-start !important;
 
     li {
       display: flex !important;
-      padding: 10px 0;
+      padding: 12px 0;
+      font-size: 13px;
       z-index: 99;
       color: black;
       line-height: normal;
@@ -213,6 +259,10 @@ header {
       .dropbtn {
         background-color: white;
         color: black;
+      }
+
+      .dropdown-content {
+        display: none !important;
       }
     }
 
@@ -231,6 +281,111 @@ header {
     width: 20%;
     color: #fff;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width: 36rem) and (max-width: 47.99rem) {
+  .promo-bar {
+    .promo {
+      font-size: 0.625rem;
+      line-height: 1rem;
+      padding-left: 1.0625rem;
+      padding-right: 1.0625rem;
+    }
+  }
+
+  header {
+    .container {
+      padding-right: 19.5px;
+      padding-left: 19.5px;
+
+      #navbar {
+      height: 64px !important;
+      line-height: 64px;
+
+      .brand-info {
+       .brand-name { width: 10.5rem; }
+      }
+
+      #navbar-right {
+        top: 112px;
+      }
+    }
+  }
+  }
+
+  header nav .mobile-nav {
+    a {
+      display: inline-flex;
+      padding-inline: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 35.99rem) {
+  .promo-bar {
+    .promo {
+      font-size: 0.625rem;
+      line-height: 1rem;
+      padding-left: 1.0625rem;
+      padding-right: 1.0625rem;
+    }
+  }
+
+  header {
+    .container {
+      padding-right: 19.5px;
+      padding-left: 19.5px;
+
+      #navbar {
+      height: 64px !important;
+      line-height: 64px;
+
+      .brand-info {
+       .brand-name { width: 10.5rem; }
+      }
+
+      #navbar-right {
+        top: 112px;
+      }
+    }
+  }
+  }
+
+  header nav .mobile-nav {
+    padding-right: 10px;
+
+    a {
+      display: inline-flex;
+      padding-inline: 1.2rem;
+    }
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 63.99rem) {
+  header {
+    .container {
+      padding-right: 36px;
+      padding-left: 36px;
+
+      #navbar {
+      height: 64px !important;
+      line-height: 64px;
+
+      #navbar-right {
+        top: 100px;
+      }
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) and (max-width: 85.375rem) {
+  header {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
 }
