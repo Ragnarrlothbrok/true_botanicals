@@ -122,11 +122,11 @@ header {
 
       .dropdown-content {
         display: none;
-        position: fixed;
+        position: absolute;
         width: 100vw;
         background-color: #fff;
         z-index: 1;
-        left: 0;
+        left: -2.5rem;
 
         a {
           float: none;
