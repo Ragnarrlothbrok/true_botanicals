@@ -32,11 +32,28 @@ for (let i = 0; i < dropdown.length; i++) {
 }
 
 hamburgerMenu.addEventListener("click", () => {
-  navbarRight.classList.toggle("active");
-  overlay.classList.toggle("active");
+  if(navbarRight.classList.contains("active")){
+  navbarRight.classList.add("inactive");
+  setTimeout(() => {
+    navbarRight.classList.remove("active");
+  overlay.classList.remove("active");
+  }, 500);
+  }else{
+  navbarRight.classList.add("active");
+  overlay.classList.add("active");
+  }
+
+  // navbarRight.classList.toggle("active");
+  // navbarRight.classList.toggle("inactive");
+  // overlay.classList.toggle("active");
 });
 
 overlay.addEventListener("click", () => {
-  navbarRight.classList.remove("active");
-  overlay.classList.remove("active");
+  navbarRight.classList.add("close");
+  setTimeout(() => {
+    navbarRight.classList.remove("active");
+  overlay.classList.add("active");
+  }, 500);
+  // navbarRight.classList.remove("active");
+  // overlay.classList.remove("active");
 });

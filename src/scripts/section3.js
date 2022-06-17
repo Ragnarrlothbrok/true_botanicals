@@ -10,23 +10,22 @@ Swiper.use([Navigation, Pagination, Scrollbar, EffectCoverflow]);
 
 var swiper = new Swiper(".mySwiper", {
   breakpoints: {
+    576: {
+      slidesPerView: 1,
+    },
     768: {
       slidesPerView: 2,
     },
-    1500: {
+    1600: {
       slidesPerView: 3,
     },
-    1600: {
+    1800: {
       slidesPerView: 4,
     },
   },
   pagination: {
     el: ".swiper-pagination",
     type: "fraction",
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
   },
   scrollbar: {
     el: ".swiper-scrollbar",
