@@ -1,4 +1,24 @@
-$backgroundColor: #2e261c;
+@import "./colors.scss";
+
+@keyframes left-right {
+  from {
+    left: -288px;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes right-left {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -288px;
+  }
+}
 
 .promo-bar {
   position: relative;
@@ -7,18 +27,20 @@ $backgroundColor: #2e261c;
   .promo {
     display: flex;
     width: 100%;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-  color: $backgroundColor;
-  background-color: #eaccc3;
-  padding: 0.5rem 0;
-  line-height: 1.25rem;
-  font-size: 0.8125rem;
-  letter-spacing: 0;
+    align-items: center;
+    justify-content: center;
+    font-family: wotfard-light, sans-serif;
+    text-align: left;
+    color: $primary-color;
+    background-color: #eaccc3;
+    padding: 0.5rem 0;
+    line-height: 1.25rem;
+    font-size: 0.8125rem;
+    letter-spacing: 0;
   }
 
   .promo-button {
+    font-family: wotfard, sans-serif;
     position: relative;
     padding-right: 15px;
     padding-bottom: 0;
@@ -27,31 +49,31 @@ $backgroundColor: #2e261c;
     min-width: 70px;
     font-weight: 500;
     text-decoration: none;
-    color: $backgroundColor;
+    color: $primary-color;
     background-color: transparent;
 
     .promo-number {
       display: inline-block;
       position: absolute;
-    top: 0;
-    right: 0;
-    width: 14px;
-    height: 14px;
-    line-height: 14px;
-    border-radius: 50%;
-    font-size: 10px;
-    background: #f3f2ef;
-    text-align: center;
-    color: $backgroundColor;
+      top: 0;
+      right: 0;
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+      border-radius: 50%;
+      font-size: 10px;
+      background: #f3f2ef;
+      text-align: center;
+      color: $primary-color;
     }
   }
 }
 
 .header-section {
   position: sticky;
-    transition: top 0.7s ease;
-    z-index: 1050;
-    top: 0;
+  transition: top 0.7s ease;
+  z-index: 1050;
+  top: 0;
 }
 
 header {
@@ -62,13 +84,13 @@ header {
   .container {
     padding-left: 2.625rem;
     padding-right: 2.625rem;
-    background-color: $backgroundColor;
+    background-color: $primary-color;
     position: relative;
     z-index: 150;
   }
 
   nav {
-  box-sizing: border-box;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     height: 99px;
@@ -98,6 +120,11 @@ header {
         font-size: 0.8125rem;
         font-family: wotfard, sans-serif;
         letter-spacing: 2px;
+        vertical-align: middle;
+
+        img {
+          display: inline;
+        }
       }
 
       #items button {
@@ -106,7 +133,7 @@ header {
         letter-spacing: 1.28px;
         color: #fff;
         border: 0;
-        background-color: $backgroundColor;
+        background-color: $primary-color;
         text-decoration: none;
         transition: 0.3s ease-out transform;
 
@@ -179,7 +206,7 @@ header {
       }
 
       li:hover {
-        border-bottom: 5px solid #c65237;
+        border-bottom: 5px solid $secondary-color;
       }
     }
 
@@ -203,10 +230,6 @@ header {
       display: inline-flex;
       justify-content: space-between;
       transition: 0.7s;
-
-      .brand-name {
-        transform: translateY(0.15rem);
-      }
     }
 
     .brand-info {
@@ -273,6 +296,11 @@ header {
     &.active {
       display: flex;
       z-index: 9;
+      animation: left-right 0.7s ease;
+    }
+
+    &.inactive {
+      animation: right-left 0.3s ease;
     }
   }
 
@@ -301,18 +329,20 @@ header {
       padding-left: 19.5px;
 
       #navbar {
-      height: 64px !important;
-      line-height: 64px;
+        height: 64px !important;
+        line-height: 64px;
 
-      .brand-info {
-       .brand-name { width: 10.5rem; }
-      }
+        .brand-info {
+          .brand-name {
+            width: 10.5rem;
+          }
+        }
 
-      #navbar-right {
-        top: 112px;
+        #navbar-right {
+          top: 96px;
+        }
       }
     }
-  }
   }
 
   header nav .mobile-nav {
@@ -339,18 +369,20 @@ header {
       padding-left: 19.5px;
 
       #navbar {
-      height: 64px !important;
-      line-height: 64px;
+        height: 64px !important;
+        line-height: 64px;
 
-      .brand-info {
-       .brand-name { width: 10.5rem; }
-      }
+        .brand-info {
+          .brand-name {
+            width: 10.5rem;
+          }
+        }
 
-      #navbar-right {
-        top: 112px;
+        #navbar-right {
+          top: 112px;
+        }
       }
     }
-  }
   }
 
   header nav .mobile-nav {
@@ -370,12 +402,12 @@ header {
       padding-left: 36px;
 
       #navbar {
-      height: 64px !important;
-      line-height: 64px;
+        height: 64px !important;
+        line-height: 64px;
 
-      #navbar-right {
-        top: 100px;
-      }
+        #navbar-right {
+          top: 100px !important;
+        }
       }
     }
   }

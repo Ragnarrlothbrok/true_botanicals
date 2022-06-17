@@ -25,6 +25,7 @@ function scrollFunction() {
 for (let i = 0; i < dropdown.length; i++) {
   dropdown[i].addEventListener("mouseenter", function () {
     overlay.classList.add("active");
+    
   });
   dropdown[i].addEventListener("mouseleave", function () {
     overlay.classList.remove("active");
@@ -32,11 +33,29 @@ for (let i = 0; i < dropdown.length; i++) {
 }
 
 hamburgerMenu.addEventListener("click", () => {
-  navbarRight.classList.toggle("active");
-  overlay.classList.toggle("active");
+  if (navbarRight.classList.contains("active")) {
+    navbarRight.classList.add("inactive");
+    setTimeout(() => {
+      navbarRight.classList.remove("active");
+      overlay.classList.remove("active");
+      navbarRight.classList.remove("inactive");
+    }, 300);
+  } else {
+    navbarRight.classList.add("active");
+    overlay.classList.add("active");
+  }
 });
 
 overlay.addEventListener("click", () => {
-  navbarRight.classList.remove("active");
-  overlay.classList.remove("active");
+  if (navbarRight.classList.contains("active")) {
+    navbarRight.classList.add("inactive");
+    setTimeout(() => {
+      navbarRight.classList.remove("active");
+      overlay.classList.remove("active");
+      navbarRight.classList.remove("inactive");
+    }, 300);
+  } else {
+    navbarRight.classList.add("active");
+    overlay.classList.add("active");
+  }
 });
