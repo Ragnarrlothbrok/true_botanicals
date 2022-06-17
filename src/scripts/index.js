@@ -1,4 +1,4 @@
-import "../styles/index.scss";
+import "../styles/common.scss";
 import "../styles/navbar.scss";
 import "../styles/section2.scss";
 import "../styles/section3.scss";
