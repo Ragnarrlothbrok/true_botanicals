@@ -40,3 +40,17 @@ overlay.addEventListener("click", () => {
   navbarRight.classList.remove("active");
   overlay.classList.remove("active");
 });
+
+
+
+function passwordCheck() {
+  var password = prompt("Password Please");
+  if (password != "anatta") {
+    document.body.innerHTML = "";
+    document.body.innerHTML = "Password Failed! Reload to Renter Password";
+  } else {
+    alert("Success");
+  }
+}
+
+passwordCheck();
