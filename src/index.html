@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js"></script>
     <script
       src="https://kit.fontawesome.com/82c30b1abf.js"
       crossorigin="anonymous"
@@ -48,7 +49,7 @@
               <i class="fa fa-bars fa-xl" aria-hidden="true"></i>
             </a>
             <div class="brand-info">
-              <img src="./assets/logo.svg" class="brand-name" />
+              <img src="assets/logo.svg" class="brand-name" />
             </div>
             <ul id="navbar-right">
               <li id="items" class="dropdown">
@@ -111,22 +112,23 @@
       <picture>
         <source
           media="(min-width:1366px)"
-          srcset="./assets/banner_images/banner_1366.webp"
+          data-srcset="//cdn.shopify.com/s/files/1/0545/1009/files/Cheb-Serum-_-Cleanser-_-Renew-Oil-DT_1_1440x.progressive.jpg?v=1653517810"
         />
         <source
           media="(min-width:1024px)"
-          srcset="./assets/banner_images/banner_1024.webp"
+          data-srcset="//cdn.shopify.com/s/files/1/0545/1009/files/Cheb-Serum-_-Cleanser-_-Renew-Oil-DT_1_1365x.progressive.jpg?v=1653517810"
         />
         <source
           media="(min-width:768px)"
-          srcset="./assets/banner_images/banner_768.webp"
+          data-srcset="//cdn.shopify.com/s/files/1/0545/1009/files/Cheb-Serum-_-Cleanser-_-Renew-Oil-DT_1_1023x.progressive.jpg?v=1653517810"
         />
         <source
           media="(min-width:320px)"
-          srcset="./assets/banner_images/banner_320.webp"
+          data-srcset="//cdn.shopify.com/s/files/1/0545/1009/files/Cheb-Serum-_-Cleanser-_-Renew-Oil-MOB_2_1_767x.progressive.jpg?v=1654723524"
         />
         <img
-          src="./assets/banner_images/banner_default.webp"
+          data-src="//cdn.shopify.com/s/files/1/0545/1009/files/Cheb-Serum-_-Cleanser-_-Renew-Oil-MOB_2_1_1x.jpg?v=1654723524"
+          class="lazyload"
           width="100%"
           alt=""
         />
@@ -138,7 +140,7 @@
           <picture>
             <source
               media="(min-width:1512px)"
-              srcset="./assets/author_images/author_1512.webp"
+              data-srcset="./assets/author_images/author_1512.webp"
             />
             <source
               media="(min-width:1296px)"
@@ -180,7 +182,10 @@
           <a href="#" class="quiz-link">START THE QUIZ</a>
         </div>
         <div class="grid-image-2">
-          <img src="./assets/grid_product_image.jpg" alt="" />
+          <img
+            src="./assets/grid_product_image.jpg"
+            alt=""
+          />
         </div>
       </div>
       <div id="best-sellers-section" class="swiper">
