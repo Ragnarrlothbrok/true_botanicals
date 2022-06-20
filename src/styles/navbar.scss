@@ -20,6 +20,16 @@
   }
 }
 
+@keyframes top-bottom {
+  from {
+    top: -388px;
+  }
+
+  to {
+    top: 100%;
+  }
+}
+
 .promo-bar {
   position: relative;
   z-index: 1100;
@@ -80,13 +90,13 @@ header {
   box-sizing: border-box;
   width: 100vw;
   max-width: 100%;
+  z-index: 110;
 
   .container {
     padding-left: 2.625rem;
     padding-right: 2.625rem;
     background-color: $primary-color;
     position: relative;
-    z-index: 150;
   }
 
   nav {
@@ -97,7 +107,6 @@ header {
     padding: 0;
     align-items: center;
     transition: 0.7s;
-    z-index: 150;
     position: relative;
 
     .icon {
@@ -152,8 +161,9 @@ header {
         position: absolute;
         width: 100vw;
         background-color: #fff;
-        z-index: 1;
+        z-index: -100;
         left: -2.5rem;
+        animation: top-bottom 0.5s ease-out;
 
         a {
           float: none;
@@ -313,6 +323,33 @@ header {
   }
 }
 
+@media (min-width: 64rem) and (max-width: 85.375rem) {
+  header {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 63.99rem) {
+  header {
+    .container {
+      padding-right: 36px;
+      padding-left: 36px;
+
+      #navbar {
+        height: 64px !important;
+        line-height: 64px;
+
+        #navbar-right {
+          top: 100px !important;
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 36rem) and (max-width: 47.99rem) {
   .promo-bar {
     .promo {
@@ -339,7 +376,7 @@ header {
         }
 
         #navbar-right {
-          top: 96px;
+          top: 96px !important;
         }
       }
     }
@@ -379,7 +416,7 @@ header {
         }
 
         #navbar-right {
-          top: 112px;
+          top: 112px !important;
         }
       }
     }
@@ -391,33 +428,6 @@ header {
     a {
       display: inline-flex;
       padding-inline: 1.2rem;
-    }
-  }
-}
-
-@media (min-width: 48rem) and (max-width: 63.99rem) {
-  header {
-    .container {
-      padding-right: 36px;
-      padding-left: 36px;
-
-      #navbar {
-        height: 64px !important;
-        line-height: 64px;
-
-        #navbar-right {
-          top: 100px !important;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 64rem) and (max-width: 85.375rem) {
-  header {
-    .container {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
     }
   }
 }
