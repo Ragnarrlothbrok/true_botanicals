@@ -1,3 +1,7 @@
-import '../styles/index.scss';
-
-console.log('webpack starterkit');
+import "../styles/common.scss";
+import "../styles/navbar.scss";
+import "../styles/section2.scss";
+import "../styles/section3.scss";
+import "../styles/section4.scss";
+import "./navbar";
+import "./section3";
