@@ -8,7 +8,7 @@ import {
 
 Swiper.use([Navigation, Pagination, Scrollbar, EffectCoverflow]);
 
-var swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".mySwiper", {
   breakpoints: {
     576: {
       slidesPerView: 1,
